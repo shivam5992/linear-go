@@ -1,3 +1,9 @@
+/* 
+
+Simple Linear Regression Implementation in GoLang
+
+*/
+
 package main
 
 import (
@@ -76,16 +82,3 @@ func linear_regression(pred_vars []float64, target []float64, test_vars [] float
 }
 
 
-func main(){
-	pred_vars := []float64{1,2,4,3,5}
-	target := []float64{1,3,3,2,5}
-	
-	test_vars := []float64{5,6}
-	actual := []float64{6,7}
-
-	predicted := linear_regression(pred_vars, target, test_vars)
-	fmt.Println(predicted)
-
-	rmse := rmse(actual, predicted)
-	fmt.Println(rmse)
-}
